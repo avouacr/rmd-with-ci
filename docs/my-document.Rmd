@@ -1,13 +1,29 @@
 ---
-title: "My document"
-output: 
-  github_document: default
-  word_document: default
-  html_document: default
-  pdf_document: default
+title: "Test R Markdown"
+output: pdf_document
 ---
 
-Introduction
----
 
-Some highly informative text, now with a clause.
+*R Markdown* permet de mélanger :
+
+- du texte libre mis en forme
+- des blocs de code R
+
+Les blocs de code sont exécutés et leur résultat affiché, par exemple :
+
+```{r}
+mean(mtcars$mpg)
+```
+
+## Graphiques
+
+On peut également inclure des graphiques :
+
+```{r}
+plot(mtcars$hp, mtcars$mpg)
+```
+
+## LaTeX
+
+$$ y_{ij} = b_{ij} + \beta_{0} + \beta_{1} $$
+

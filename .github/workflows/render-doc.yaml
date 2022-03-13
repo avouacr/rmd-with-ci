@@ -17,8 +17,8 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages("rmarkdown")'
       - name: Render my document to all types
-        run: Rscript -e 'rmarkdown::render("docs/my-document.Rmd", output_format = "all")'
-      - name: Archive artifacts
+        run: Rscript -e 'rmarkdown::render("docs/document.Rmd", output_format = "all")'
+      - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: outputs
